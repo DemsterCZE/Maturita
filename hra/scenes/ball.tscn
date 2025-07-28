@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://bujpy8yj7514g"]
+
+[ext_resource type="Script" path="res://scripts/Game_logic/ball_hit.gd" id="1_vxjhv"]
+[ext_resource type="Texture2D" uid="uid://bb1gm2vqhr02p" path="res://assets/micek.svg" id="1_x3kd2"]
+[ext_resource type="AudioStream" uid="uid://dvlr65grjuco6" path="res://assets/sounds/pong.wav" id="3_0a65u"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_onjaf"]
+friction = 0.05
+bounce = 0.86
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yen5v"]
+radius = 9.00256
+
+[node name="Ball" type="Node2D"]
+script = ExtResource("1_vxjhv")
+
+[node name="ping" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_0a65u")
+volume_db = 10.48
+
+[node name="micek" type="RigidBody2D" parent="."]
+scale = Vector2(0.997271, 1.00121)
+mass = 0.01
+physics_material_override = SubResource("PhysicsMaterial_onjaf")
+can_sleep = false
+continuous_cd = 2
+max_contacts_reported = 1
+contact_monitor = true
+linear_damp = -0.02
+constant_torque = 10.0
+
+[node name="Sprite2D" type="Sprite2D" parent="micek"]
+position = Vector2(516.844, 322.912)
+rotation = -0.0202769
+scale = Vector2(0.167, 0.2)
+texture = ExtResource("1_x3kd2")
+region_enabled = true
+region_rect = Rect2(248.313, 354.06, 186.841, 156.915)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="micek"]
+position = Vector2(516.587, 322.912)
+rotation = 3.14159
+scale = Vector2(1.57952, 1.46055)
+shape = SubResource("CircleShape2D_yen5v")
+
+[connection signal="body_entered" from="micek" to="." method="_on_micek_body_entered"]

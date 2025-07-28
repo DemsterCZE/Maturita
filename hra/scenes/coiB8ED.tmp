@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://khq4mpkxahxs"]
+
+[ext_resource type="Texture2D" uid="uid://bdup2vpxoo36f" path="res://assets/coin.png" id="1_r8luj"]
+[ext_resource type="Script" path="res://scripts/Game_logic/coin.gd" id="2_sn0qw"]
+[ext_resource type="AudioStream" uid="uid://c1l2t3l2kb6hu" path="res://assets/sounds/cink.mp3" id="3_n22ha"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bxm1a"]
+
+[node name="coin" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(48, 64)
+scale = Vector2(0.0719316, 0.0683521)
+texture = ExtResource("1_r8luj")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+script = ExtResource("2_sn0qw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+position = Vector2(5.30323e-05, -0.000111619)
+scale = Vector2(24.1423, 25.0766)
+shape = SubResource("CircleShape2D_bxm1a")
+
+[node name="soundek" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_n22ha")
+
+[connection signal="body_entered" from="Sprite2D/Area2D" to="Sprite2D/Area2D" method="_on_body_entered"]

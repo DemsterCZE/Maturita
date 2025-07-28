@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PING | Maturitní projekt</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <h1 class="name">PING | Home</h1>
+            <a class="odkaz" href=".\about.html">O hře</a>
+            <a class="odkaz" href=".\contact.html">Kontakt</a>
+            <a class="odkaz" href=".\leaderboard.html">Leaderboard</a>
+            <a href=".\login.html" class="login" id="login_btn"><img src="assets/sign_in.svg" alt="Přihlásit se" height="70px"></a>
+        </nav>
+    </header>
+    <main class="main_class">
+    <div class="article1" style="text-decoration: none">
+        <h2>Vítejte na stránkách hry <i>PING</i></h2>
+        <p>Hra byla vytvořena pomocí herního enginu Godot. Doufáme, že Váš herní zážitek bude co nejlepší.</p>
+        <h3 style="text-decoration: underline;">Hra je dostupná na:</h3>
+        <img src="assets/windows.svg" height="70px" alt="windows" style="margin-right: 40px;">
+        <img src="assets/linux.svg" alt="linux" height="70px" style="margin-right: 40px;">
+        <img src="assets/apple.svg" alt="apple" height="70px">
+        <br>
+        <button class="button">Stáhněte zde</button>
+    </div>
+    <div class="signup-reminder">
+        <h3>Nezapomeňte se zaregistrovat! 🎮</h3>
+        <p>Staňte se součástí naší komunity a soutěžte s ostatními hráči v žebříčku. Dokažte, že jste ten nejlepší.</p>
+        <a href="register.html" class="button">Registrovat se</a>
+    </div>
+    </main>
+    <img src="assets/ping.svg" alt="" height="999dpx" style="filter:brightness(0.7); z-index: -1; position: fixed; align-self: center;">
+    <script src="scripts/check_user_login.js"></script>
+</body>
+</html>

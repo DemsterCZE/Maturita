@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://uot7q6pe84vu"]
+
+[ext_resource type="Script" path="res://scripts/Game_logic/border_exit_detection.gd" id="1_lp6ey"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jva1l"]
+size = Vector2(1280, 768)
+
+[node name="borders" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_lp6ey")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(576, 320)
+shape = SubResource("RectangleShape2D_jva1l")
+
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

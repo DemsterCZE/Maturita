@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwahy844iceju"]
+
+[ext_resource type="Script" path="res://scripts/player_scripts/mouse_cursor.gd" id="1_qevhg"]
+[ext_resource type="Texture2D" uid="uid://8dedvnvyveql" path="res://assets/empty.png" id="2_b2s8y"]
+[ext_resource type="Texture2D" uid="uid://caskfcdwtm82g" path="res://assets/paddle.svg" id="2_yutr2"]
+
+[sub_resource type="GDScript" id="GDScript_eyfno"]
+script/source = "extends CollisionPolygon2D
+
+
+"
+
+[node name="Coursor_manager" type="CanvasLayer"]
+script = ExtResource("1_qevhg")
+empty_cursor = ExtResource("2_b2s8y")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(612.686, 364.211)
+scale = Vector2(0.329445, 0.343064)
+texture = ExtResource("2_yutr2")
+region_enabled = true
+region_rect = Rect2(259.63, 334.6, 247.023, 386.285)
+
+[node name="paddle" type="CharacterBody2D" parent="Sprite"]
+motion_mode = 1
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite/paddle"]
+position = Vector2(-1298.47, -754.911)
+scale = Vector2(2.17136, 2.19786)
+polygon = PackedVector2Array(621, 367, 628, 363, 635, 357, 639, 352, 641, 349, 644, 344, 645, 342, 647, 336, 649, 330, 650, 324, 650, 316, 650, 306, 647, 295, 643, 286, 637, 278, 632, 273, 625, 267, 614, 262, 607, 260, 601, 259, 596, 259, 590, 260, 584, 261, 575, 265, 569, 269, 563, 274, 557, 280, 552, 289, 548, 298, 547, 303, 546, 307, 546, 313, 546, 321, 547, 331, 550, 340, 554, 348, 559, 355, 564, 360, 572, 366, 581, 370, 583, 370, 580, 421, 614, 421, 611, 371)
+script = SubResource("GDScript_eyfno")

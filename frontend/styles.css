@@ -1,0 +1,295 @@
+
+
+body {
+    background: linear-gradient(104deg, #0c5b9b, #16396d);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    margin: 0px;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+
+nav {
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    padding: 15px 25px;
+    gap: 24px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+nav .odkaz{
+    left: 10%;
+    font-family: var(--default-font-family);
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 20px 15px;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    left: 20px;
+}
+
+nav .name {
+    position: relative;
+    bottom: 3px;
+    font-family: var(--header-font-family);
+}
+
+
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #38bdf8;
+    transition: 0.4s ease-in-out;
+    transform: translateX(-50%);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: l;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+}
+
+.login {
+    transition: 0.3s ease-in-out; 
+    position: absolute; right: 5%; 
+    bottom: 10px;
+}
+.login:hover{
+    filter: brightness(75%);
+}
+
+header{
+position: relative;
+margin: -65px;
+}
+
+.article1{
+    position: relative;
+    width: 40%;
+}
+.article1 h2 {
+    font-size: 45px;
+}
+
+.article1 h3 {
+    font-size: 30px;
+}
+
+.main_class {
+    display: flex;
+    gap: 300px;
+    top: 120px;
+    align-self: center;
+    position: absolute;
+    width: 70%;
+}
+
+.knewave-regular {
+    font-family: "Knewave", system-ui;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 80px;
+  }
+  
+  
+
+.leaderboard {
+    align-self: center;
+    position: relative;
+    width: 80%;
+    height: 100%;
+    top: 70px;
+}
+
+
+.button {
+    margin-top: 50px;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #005f9e, #107fce);
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+:root {
+    --header-font-family: "Montserrat", sans-serif;
+    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+} 
+
+.signup-reminder {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 300px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    height: 100%;
+    margin-top: 15%;
+}
+
+.signup-reminder h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.signup-reminder p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.signup-reminder .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #ff6600, #cc4400);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.signup-reminder .button:hover {
+    background: linear-gradient(45deg, #ff8800, #dd5500);
+    transform: scale(1.05);
+}
+
+#img:hover{
+    filter: invert();
+}
+
+#tabulka {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    color: white;
+    font-size: 18px;
+}
+
+#tabulka th, #tabulka td {
+    padding: 12px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+#tabulka th {
+    background: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#tabulka tr:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+}
+
+.login-container {
+    top: 200px;
+    align-self: center;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 20%;
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+.login-container h2 {
+    color: white;
+}
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+.input-group label {
+    display: block;
+    font-weight: bold;
+    color: white;
+}
+.input-group input {
+    width: 95%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background: #ff9800;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.login-button:hover {
+    background: #e68900;
+}

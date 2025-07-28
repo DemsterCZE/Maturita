@@ -1,0 +1,48 @@
+[gd_scene load_steps=9 format=3 uid="uid://cyrokuoyw76n1"]
+
+[ext_resource type="Script" path="res://scripts/Game_logic/main.gd" id="1_nja6e"]
+[ext_resource type="Texture2D" uid="uid://bfwon2m2wdpap" path="res://assets/cropped_top_row.png" id="2_k5snv"]
+[ext_resource type="PackedScene" uid="uid://cwahy844iceju" path="res://scenes/player.tscn" id="3_g404g"]
+[ext_resource type="PackedScene" uid="uid://bujpy8yj7514g" path="res://scenes/ball.tscn" id="4_7gtnv"]
+[ext_resource type="PackedScene" uid="uid://uot7q6pe84vu" path="res://scenes/borders.tscn" id="5_lfoi1"]
+[ext_resource type="PackedScene" uid="uid://khq4mpkxahxs" path="res://scenes/coin.tscn" id="6_xbjow"]
+[ext_resource type="AudioStream" uid="uid://c1l2t3l2kb6hu" path="res://assets/sounds/cink.mp3" id="7_esi0m"]
+[ext_resource type="Script" path="res://scripts/Game_logic/score_count.gd" id="8_spepo"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_nja6e")
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.215902, 0.215902, 0.215902, 1)
+position = Vector2(546, 334)
+scale = Vector2(-1.25458, 2.10794)
+texture = ExtResource("2_k5snv")
+
+[node name="Coursor_manager" parent="." instance=ExtResource("3_g404g")]
+
+[node name="Ball" parent="." instance=ExtResource("4_7gtnv")]
+scale = Vector2(1.00087, 1.00429)
+
+[node name="borders" parent="." instance=ExtResource("5_lfoi1")]
+visible = false
+
+[node name="coin" parent="." instance=ExtResource("6_xbjow")]
+position = Vector2(8.00002, 11)
+scale = Vector2(0.99471, 1)
+
+[node name="cink" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_esi0m")
+
+[node name="score" type="Label" parent="."]
+offset_left = 869.0
+offset_top = 12.0
+offset_right = 1136.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Tvoje skóre: 0"
+horizontal_alignment = 2
+script = ExtResource("8_spepo")
+
+[connection signal="coin_taken" from="coin" to="." method="_on_coin_coin_taken"]
+[connection signal="coin_taken" from="coin" to="score" method="_on_coin_coin_taken"]

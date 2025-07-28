@@ -1,0 +1,220 @@
+[gd_scene load_steps=20 format=3 uid="uid://jpfompnayw0i"]
+
+[ext_resource type="Script" path="res://scripts/Game_logic/game_over.gd" id="1_pqkk3"]
+[ext_resource type="FontFile" uid="uid://bvctxe84u5e6l" path="res://assets/fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth,wght.ttf" id="1_xdwy6"]
+[ext_resource type="Script" path="res://scripts/game_over/restart.gd" id="2_21djc"]
+[ext_resource type="Script" path="res://scripts/game_over/menu.gd" id="3_odnkq"]
+[ext_resource type="AudioStream" uid="uid://55hhx8pt7hnn" path="res://assets/sounds/cry.mp3" id="4_t2ml1"]
+[ext_resource type="AudioStream" uid="uid://nmkps3u380x2" path="res://assets/sounds/success.mp3" id="6_3cr87"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjpe7"]
+bg_color = Color(0.879284, 0.385275, 0.757305, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jkl3t"]
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n2bcm"]
+bg_color = Color(0.334918, 0.629309, 3.85046e-07, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rp6fm"]
+bg_color = Color(0.303438, 0.574913, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ajcpt"]
+bg_color = Color(0.257766, 0.49465, 9.62615e-08, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pf87y"]
+bg_color = Color(0.333333, 0.627451, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ta0t8"]
+bg_color = Color(0.333333, 0.627451, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_46euu"]
+bg_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dgo0c"]
+bg_color = Color(0.619608, 0, 0, 0.835294)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nx28j"]
+bg_color = Color(0.552962, 5.89602e-07, 4.81307e-07, 0.835294)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7hiji"]
+bg_color = Color(0.403903, 7.64076e-07, 2.40654e-08, 0.835294)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p7q3q"]
+bg_color = Color(0.619608, 0, 0, 0.835294)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nq4ys"]
+bg_color = Color(0.619608, 0, 0, 0.835294)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pqkk3")
+
+[node name="background" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0.372549)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kjpe7")
+
+[node name="game_over" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 168.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_xdwy6")
+theme_override_font_sizes/font_size = 118
+text = "Game over"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="current_score" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 200.0
+offset_top = -68.0
+offset_right = 485.0
+offset_bottom = -4.0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_xdwy6")
+theme_override_font_sizes/font_size = 44
+uppercase = true
+
+[node name="best_score" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 696.0
+offset_top = -68.0
+offset_right = 962.0
+offset_bottom = -6.0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_xdwy6")
+theme_override_font_sizes/font_size = 44
+uppercase = true
+
+[node name="Menu" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 712.0
+offset_top = 512.0
+offset_right = 960.0
+offset_bottom = 576.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jkl3t")
+
+[node name="Button" type="Button" parent="Menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxFlat_n2bcm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rp6fm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ajcpt")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_pf87y")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ta0t8")
+text = "Main menu"
+script = ExtResource("3_odnkq")
+
+[node name="Restart" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 512.0
+offset_right = 440.0
+offset_bottom = 576.0
+scale = Vector2(0.982219, 0.993516)
+theme_override_styles/panel = SubResource("StyleBoxFlat_46euu")
+
+[node name="Button" type="Button" parent="Restart"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxFlat_dgo0c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nx28j")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7hiji")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_p7q3q")
+theme_override_styles/focus = SubResource("StyleBoxFlat_nq4ys")
+text = "Restart"
+script = ExtResource("2_21djc")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_t2ml1")
+
+[node name="hi" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_3cr87")
+
+[node name="get_highest_score" type="HTTPRequest" parent="."]
+
+[node name="update_score" type="HTTPRequest" parent="."]
+
+[connection signal="new_highest_score" from="." to="." method="_on_new_highest_score"]
+[connection signal="pressed" from="Menu/Button" to="Menu/Button" method="_on_pressed"]
+[connection signal="pressed" from="Restart/Button" to="Restart/Button" method="_on_pressed"]
+[connection signal="request_completed" from="get_highest_score" to="." method="_on_get_highest_score_request_completed"]
+[connection signal="request_completed" from="update_score" to="." method="_on_update_score_request_completed"]

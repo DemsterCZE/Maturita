@@ -1,0 +1,295 @@
+[gd_scene load_steps=26 format=3 uid="uid://c7w1ndosjo4g0"]
+
+[ext_resource type="FontFile" uid="uid://ck8itwntqu58j" path="res://assets/fonts/Open_Sans/static/OpenSans-VariableFont_wdth,wght.ttf" id="1_cfjt7"]
+[ext_resource type="Texture2D" uid="uid://caskfcdwtm82g" path="res://assets/paddle.svg" id="2_d5ol4"]
+[ext_resource type="Script" path="res://scripts/main_menu/start.gd" id="3_3p1yf"]
+[ext_resource type="Script" path="res://scripts/main_menu/quit.gd" id="4_tssot"]
+[ext_resource type="Script" path="res://scripts/main_menu/toAuth.gd" id="5_7up74"]
+[ext_resource type="Script" path="res://scripts/main_menu/SignedAs.gd" id="6_htypk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l3d4y"]
+bg_color = Color(0.746096, 0.507651, 0.407667, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dq7w4"]
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k3pv8"]
+bg_color = Color(0.334918, 0.629309, 3.85046e-07, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_18lye"]
+bg_color = Color(0.303438, 0.574913, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m408t"]
+bg_color = Color(0.257766, 0.49465, 9.62615e-08, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_my4hk"]
+bg_color = Color(0.333333, 0.627451, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1bmbu"]
+bg_color = Color(0.333333, 0.627451, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gpoyu"]
+bg_color = Color(0.605527, 0.539938, 5.77569e-07, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_csu4i"]
+bg_color = Color(0.619608, 0, 0, 0.835294)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i0wae"]
+bg_color = Color(0.552962, 5.89602e-07, 4.81307e-07, 0.835294)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uixj3"]
+bg_color = Color(0.403903, 7.64076e-07, 2.40654e-08, 0.835294)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iycit"]
+bg_color = Color(0.619608, 0, 0, 0.835294)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cgewc"]
+bg_color = Color(0.619608, 0, 0, 0.835294)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8jlv5"]
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjnhc"]
+bg_color = Color(9.43363e-06, 0.651127, 0.888181, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3nqsi"]
+bg_color = Color(0, 0.603922, 0.819608, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bxom6"]
+bg_color = Color(1.73271e-06, 0.562096, 0.767765, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nbuux"]
+bg_color = Color(0, 0.65098, 0.886275, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sdfj8"]
+bg_color = Color(0, 0.65098, 0.886275, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_l3d4y")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 160.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_cfjt7")
+theme_override_font_sizes/font_size = 120
+text = "Ping"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Paddle" type="Sprite2D" parent="."]
+position = Vector2(748, 103)
+rotation = 0.698132
+scale = Vector2(-0.444413, 0.485601)
+texture = ExtResource("2_d5ol4")
+
+[node name="Paddle2" type="Sprite2D" parent="."]
+position = Vector2(401, 103)
+rotation = -0.698132
+scale = Vector2(-0.444413, 0.485601)
+texture = ExtResource("2_d5ol4")
+
+[node name="start" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 256.0
+offset_right = 696.0
+offset_bottom = 320.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dq7w4")
+
+[node name="start" type="Button" parent="start"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxFlat_k3pv8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_18lye")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_m408t")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_my4hk")
+theme_override_styles/focus = SubResource("StyleBoxFlat_1bmbu")
+text = "Start Game"
+script = ExtResource("3_3p1yf")
+
+[node name="quit" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 400.0
+offset_right = 696.0
+offset_bottom = 464.0
+scale = Vector2(1.02222, 0.993516)
+theme_override_styles/panel = SubResource("StyleBoxFlat_gpoyu")
+
+[node name="Button" type="Button" parent="quit"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxFlat_csu4i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_i0wae")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uixj3")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_iycit")
+theme_override_styles/focus = SubResource("StyleBoxFlat_cgewc")
+text = "QUIT"
+script = ExtResource("4_tssot")
+
+[node name="label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -128.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.999986, 0.335533, 0.269613, 1)
+theme_override_font_sizes/font_size = 54
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="login_button" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -256.0
+offset_top = -63.9999
+offset_right = -8.0
+offset_bottom = 6.10352e-05
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1.02222, 0.993516)
+theme_override_styles/panel = SubResource("StyleBoxFlat_8jlv5")
+
+[node name="Button" type="Button" parent="login_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxFlat_kjnhc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3nqsi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bxom6")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_nbuux")
+theme_override_styles/focus = SubResource("StyleBoxFlat_sdfj8")
+text = "Login"
+script = ExtResource("5_7up74")
+
+[node name="SignedAs" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -80.0
+offset_right = -408.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "Přihlášen jako: "
+vertical_alignment = 1
+script = ExtResource("6_htypk")
+
+[node name="get_player_name" type="HTTPRequest" parent="."]
+
+[connection signal="pressed" from="start/start" to="start/start" method="_on_pressed"]
+[connection signal="pressed" from="quit/Button" to="quit/Button" method="_on_pressed"]
+[connection signal="pressed" from="login_button/Button" to="login_button/Button" method="_on_pressed"]
+[connection signal="request_completed" from="get_player_name" to="SignedAs" method="_on_get_player_name_request_completed"]

@@ -1,0 +1,170 @@
+[gd_scene load_steps=11 format=3 uid="uid://dd70d8wkba4ch"]
+
+[ext_resource type="Script" path="res://scripts/auth_scripts/sign_in.gd" id="1_6and0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8aywk"]
+bg_color = Color(0.817829, 0.529681, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jbns1"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bs0xg"]
+bg_color = Color(0.752941, 0.752941, 0.752941, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rlj6r"]
+bg_color = Color(0.753984, 0.753984, 0.753984, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dn62q"]
+bg_color = Color(5.67943e-06, 0.697224, 0.605089, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ccdf"]
+bg_color = Color(3.22476e-06, 0.629638, 0.54407, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6o1t6"]
+bg_color = Color(1.01075e-06, 0.625067, 0.54007, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tmfxm"]
+bg_color = Color(0, 0.698039, 0.603922, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1sel2"]
+bg_color = Color(0, 0.698039, 0.603922, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Auth" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8aywk")
+
+[node name="Room" type="Label" parent="Background"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 104.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 70
+text = "Login"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="login" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 192.0
+offset_right = 800.0
+offset_bottom = 256.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.276073, 0.258413, 0.257304, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_jbns1")
+theme_override_styles/focus = SubResource("StyleBoxFlat_bs0xg")
+placeholder_text = "Login (Username/Email)"
+alignment = 1
+max_length = 32
+
+[node name="password" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 320.0
+offset_right = 800.0
+offset_bottom = 384.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.276073, 0.258413, 0.257304, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_jbns1")
+theme_override_styles/focus = SubResource("StyleBoxFlat_rlj6r")
+placeholder_text = "Password"
+alignment = 1
+max_length = 32
+secret = true
+
+[node name="sign_in_button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 352.0
+offset_top = -176.0
+offset_right = -352.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_dn62q")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5ccdf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6o1t6")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_tmfxm")
+theme_override_styles/focus = SubResource("StyleBoxFlat_1sel2")
+text = "Sign in"
+script = ExtResource("1_6and0")
+
+[node name="Auth_request" type="HTTPRequest" parent="."]
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -576.0
+offset_top = -72.0
+offset_right = 576.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="sign_in_button" to="sign_in_button" method="_on_pressed"]
+[connection signal="request_completed" from="Auth_request" to="sign_in_button" method="_on_auth_request_request_completed"]
