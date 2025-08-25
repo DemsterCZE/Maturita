@@ -1,7 +1,7 @@
 from flask import Blueprint,jsonify,request
 from database_functions.add_user import add_user
 from database_functions.check_for_username_availability import check_for_username_availability
-from auth_functions import create_hash
+from auth_functions.create_hash import create_hash
 from other_functions.validate_email import validate_email
 
 
